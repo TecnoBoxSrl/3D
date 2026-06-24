@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anteprima configuratore BoldCup</title>
+    <style>
+      :root { --green: #13a36f; --dark: #17312b; --muted: #6f7f79; --paper: #f7f1df; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Arial, sans-serif; background: #fbfbf8; color: var(--dark); }
+      .top { height: 36px; background: #0f2d26; color: #d9fff1; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+      .nav, .hero, .products { width: min(1120px, calc(100% - 28px)); margin: 0 auto; }
+      .nav { height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+      .brand { font-size: 32px; font-weight: 900; } .brand span { color: var(--green); }
+      .pill { border-radius: 999px; padding: 12px 18px; background: #edf8f3; color: var(--green); font-weight: 800; }
+      .hero-wrap { background: linear-gradient(135deg, #fff, #edf8f3); padding: 40px 0 56px; }
+      .hero { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; align-items: center; }
+      .eyebrow { color: var(--green); font-weight: 900; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+      h1 { font-size: clamp(36px, 8vw, 64px); line-height: .96; margin: 12px 0 20px; }
+      p { color: var(--muted); line-height: 1.55; }
+      .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+      .button { display: inline-flex; border-radius: 999px; padding: 14px 20px; font-weight: 900; text-decoration: none; }
+      .primary { background: var(--green); color: white; } .secondary { background: white; color: var(--dark); border: 1px solid #dce8e2; }
+      .card { background: rgba(255,255,255,.9); border: 1px solid #e2eee8; border-radius: 30px; padding: 22px; box-shadow: 0 26px 70px rgba(15,45,38,.14); }
+      .stage { min-height: 360px; border-radius: 24px; background: linear-gradient(160deg, #f2fff9, #fff7e7); position: relative; display: grid; place-items: center; overflow: hidden; }
+      .stage::before { content: ""; position: absolute; width: 320px; height: 320px; right: -60px; top: -80px; border-radius: 50%; background: #dffbef; opacity: .85; }
+      .shadow { position: absolute; bottom: 58px; width: 250px; height: 38px; border-radius: 50%; background: rgba(23,49,43,.18); filter: blur(12px); }
+      .cup { width: 240px; height: 310px; position: relative; transform: rotateX(7deg) rotateY(-18deg) skewX(-4deg); }
+      .rim { position: absolute; top: 0; left: 8px; width: 224px; height: 52px; border-radius: 50%; background: #fbf4e2; border: 10px solid #efe3ca; box-shadow: inset 0 8px 14px rgba(0,0,0,.15); z-index: 3; }
+      .body { position: absolute; top: 25px; left: 22px; width: 196px; height: 260px; clip-path: polygon(0 0, 100% 0, 84% 100%, 16% 100%); background: var(--paper); overflow: hidden; box-shadow: inset 22px 0 34px rgba(255,255,255,.72), inset -28px 0 45px rgba(0,0,0,.14); }
+      .stripe { position: absolute; top: 80px; left: -36px; width: 270px; height: 74px; background: var(--green); transform: rotate(-11deg); }
+      .logo { position: absolute; top: 101px; left: 50%; transform: translateX(-50%); color: white; font-weight: 950; font-size: 25px; text-align: center; width: 150px; z-index: 2; }
+      .sub { position: absolute; top: 158px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,.75); border-radius: 999px; padding: 7px 12px; font-size: 12px; font-weight: 800; white-space: nowrap; z-index: 2; }
+      .dots { position: absolute; bottom: 34px; left: 52px; width: 100px; height: 54px; background-image: radial-gradient(#fff 0 4px, transparent 5px); background-size: 22px 22px; opacity: .8; }
+      .bottom { position: absolute; bottom: 3px; left: 54px; width: 132px; height: 30px; border-radius: 50%; background: #fff5dd; border: 6px solid #d8c7a7; z-index: 2; }
+      .controls { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .control { border: 1px solid #dfe9e4; border-radius: 14px; padding: 12px; background: white; font-weight: 800; }
+      .products { padding: 42px 0; }
+      .tabs { display: flex; gap: 12px; flex-wrap: wrap; } .tab { padding: 13px 18px; border-radius: 999px; background: white; border: 1px solid #dce8e2; font-weight: 900; } .tab.active { background: var(--green); color: white; }
+      @media (max-width: 850px) { .hero { grid-template-columns: 1fr; } .controls { grid-template-columns: 1fr; } .card { padding: 14px; } .stage { min-height: 330px; } }
+    </style>
+  </head>
+  <body>
+    <div class="top">Anteprima senza file binari: compatibile con iPad e PR diff</div>
+    <nav class="nav"><div class="brand"><span>Bold</span>Cup</div><div class="pill">My Cart</div></nav>
+    <section class="hero-wrap">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Design your product online</div>
+          <h1>Replica configuratore per bicchieri stampati</h1>
+          <p>Scegli formato, finitura e grafica: l'anteprima del prodotto da stampare mostra colori, pattern e testo.</p>
+          <div class="actions"><a class="button primary" href="index.html">Apri demo interattiva</a><a class="button secondary" href="#products">Vedi opzioni</a></div>
+        </div>
+        <div class="card">
+          <div class="stage" aria-label="Anteprima bicchiere stampato">
+            <div class="shadow"></div>
+            <div class="cup"><div class="rim"></div><div class="body"><div class="stripe"></div><div class="logo">YOUR LOGO</div><div class="sub">Single wall • 8 oz</div><div class="dots"></div></div><div class="bottom"></div></div>
+          </div>
+          <div class="controls"><div class="control">Single wall</div><div class="control">8 oz</div><div class="control">Gloss</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="products" id="products"><div class="eyebrow">Choose product type and size</div><h2>Paper cups 4 - 16 oz</h2><div class="tabs"><div class="tab active">Single wall</div><div class="tab">Double wall</div><div class="tab">Ice cream cups</div></div></section>
+  </body>
+</html>
