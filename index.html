@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoldCup Replica - Configuratore bicchieri</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <span>+44 (20) 38078243</span>
+        <span>custom printed paper cups</span>
+        <span>EN / DE / LT / SE</span>
+      </div>
+    </header>
+
+    <nav class="nav container">
+      <a class="brand" href="#" aria-label="BoldCup replica home"><span>Bold</span>Cup</a>
+      <div class="nav__links">
+        <a href="#products">Prodotti</a>
+        <a href="#designer">Design online</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contacts">Contatti</a>
+      </div>
+      <button class="cart">My Cart</button>
+    </nav>
+
+    <main>
+      <section class="hero" id="designer">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Design your product online</p>
+            <h1>Replica configuratore per bicchieri stampati</h1>
+            <p>
+              Scegli formato, finitura e grafica: l'anteprima 3D aggiorna in tempo reale colori,
+              pattern e testo come in un tool per prodotti personalizzati da stampare.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#preview">Start designing</a>
+              <a class="btn btn--ghost" href="#products">Vedi opzioni</a>
+            </div>
+          </div>
+          <section class="designer-card" aria-label="Configuratore bicchiere">
+            <div class="preview-stage" id="preview">
+              <div class="shadow"></div>
+              <div class="cup" id="cup">
+                <div class="cup__rim"></div>
+                <div class="cup__body">
+                  <div class="print print--stripe"></div>
+                  <div class="print print--dots"></div>
+                  <div class="print-text" id="printText">YOUR LOGO</div>
+                  <div class="print-subtext" id="printSubtext">Fresh coffee • 12 oz</div>
+                </div>
+                <div class="cup__bottom"></div>
+              </div>
+              <div class="rotate-hint">Drag-like preview • 3D paper cup</div>
+            </div>
+
+            <div class="controls">
+              <label>
+                Product type
+                <select id="wallType">
+                  <option value="single">Single wall</option>
+                  <option value="double">Double wall</option>
+                  <option value="ice">Ice cream cup</option>
+                </select>
+              </label>
+              <label>
+                Size
+                <select id="size">
+                  <option>4 oz</option>
+                  <option>6 oz</option>
+                  <option selected>8 oz</option>
+                  <option>12 oz</option>
+                  <option>16 oz</option>
+                </select>
+              </label>
+              <label>
+                Finish
+                <select id="finish">
+                  <option value="gloss">Gloss</option>
+                  <option value="matt">Matt</option>
+                </select>
+              </label>
+              <label>
+                Brand text
+                <input id="brandText" type="text" value="YOUR LOGO" maxlength="18" />
+              </label>
+              <label>
+                Cup color
+                <input id="cupColor" type="color" value="#f7f1df" />
+              </label>
+              <label>
+                Print color
+                <input id="printColor" type="color" value="#14a66f" />
+              </label>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="container chooser" id="products">
+        <p class="eyebrow">Choose product type and size</p>
+        <h2>Paper cups 4 - 16 oz</h2>
+        <div class="tabs" role="list" aria-label="Tipologie prodotto">
+          <button class="tab is-active">Single wall</button>
+          <button class="tab">Double wall</button>
+          <button class="tab">Salad bowls</button>
+          <button class="tab">Ice cream cups</button>
+          <button class="tab">Greaseproof paper</button>
+        </div>
+        <div class="product-grid">
+          <article class="product-option is-selected">
+            <strong>8 oz</strong>
+            <span>500 pcs. • Eco coating</span>
+          </article>
+          <article class="product-option">
+            <strong>12 oz</strong>
+            <span>Fast delivery • Matt</span>
+          </article>
+          <article class="product-option">
+            <strong>16 oz</strong>
+            <span>Full color print</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container feature-grid">
+          <div><b>QUALITY</b><span>Customer service</span></div>
+          <div><b>500 pcs.</b><span>Small quantity orders</span></div>
+          <div><b>ECO</b><span>Sustainable manufacturing</span></div>
+          <div><b>FREE</b><span>Shipping within Europe</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container footer__grid">
+        <div><b>Customer support</b><span>Workdays 9:00 - 17:00 EET</span></div>
+        <div><b>Products</b><span>Paper cups • Lids • Bowls</span></div>
+        <div><b>Newsletter</b><span>Get new offers and events</span></div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
